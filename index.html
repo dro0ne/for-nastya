@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Для моей Принцессы</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Nunito:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bokeh" aria-hidden="true"></div>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <main class="stage">
+    <div class="scene-wrap">
+      <div class="scene" id="scene" role="button" tabindex="0" aria-label="Открыть подарок">
+        <div class="rig" id="rig">
+          <div class="base" id="base"></div>
+          <div class="lid" id="lid"></div>
+        </div>
+      </div>
+      <button class="hint" id="hint" type="button"></button>
+      <p class="sub-hint off" id="subHint"></p>
+    </div>
+
+    <div class="music-bar" id="musicBar" hidden>
+      <button type="button" id="prevTrack" aria-label="Предыдущая песня">⏮</button>
+      <button type="button" id="playToggle" aria-label="Играть">▶</button>
+      <span class="track-title" id="trackTitle"></span>
+      <button type="button" id="nextTrack" aria-label="Следующая песня">⏭</button>
+      <audio id="audio" preload="metadata"></audio>
+    </div>
+  </main>
+
+  <div class="album-overlay" id="album" hidden>
+    <section class="album" role="dialog" aria-modal="true" aria-labelledby="albumTitle">
+      <div class="album-badge"><span>♥</span><span id="albumBadge"></span><span>♥</span></div>
+      <button class="album-close" id="albumClose" type="button" aria-label="Закрыть">×</button>
+      <h2 id="albumTitle"></h2>
+      <p class="album-sub" id="albumSub"></p>
+      <div class="album-frame">
+        <div class="tiles" id="tiles"></div>
+        <div class="album-sign">Lovely Album ♥</div>
+      </div>
+      <p class="album-msg" id="albumMsg"></p>
+      <button class="rain-btn" id="rainBtn" type="button"></button>
+    </section>
+  </div>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Закрыть">×</button>
+    <button class="lightbox-nav prev" id="lightboxPrev" type="button" aria-label="Предыдущее фото">‹</button>
+    <div class="lightbox-body" id="lightboxBody"></div>
+    <button class="lightbox-nav next" id="lightboxNext" type="button" aria-label="Следующее фото">›</button>
+    <div class="lightbox-dots" id="lightboxDots"></div>
+  </div>
+
+  <div class="hearts-rain" id="heartsRain" aria-hidden="true"></div>
+
+  <script src="content.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
